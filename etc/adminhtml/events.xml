@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    <event name="catalog_product_save_after">
+        <observer name="thebigsurf_product_save_after" instance="TheBigSurf\WireUpdateHook\Observer\onProductSaveAfter" />
+    </event>
+    <event name="catalog_product_attribute_update_before">
+        <observer name="thebigsurf_product_attr_update_before" instance="TheBigSurf\WireUpdateHook\Observer\onProductAttrUpdateBefore" />
+    </event>
+    <event name="catalog_product_import_bunch_save_after">
+        <observer name="thebigsurf_catalog_product_import_bunch_save_after" instance="TheBigSurf\WireUpdateHook\Observer\onProductImportAfter" />
+    </event>
+    <event name="catalog_entity_attribute_save_after">
+        <observer name="weee" instance="TheBigSurf\WireUpdateHook\Observer\onSaveAttributeObserver" />
+    </event>
+</config>
