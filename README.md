@@ -5,7 +5,7 @@ Listen for product and attribute events and pass them to a configured API endpoi
 ### To Install via Composer:
 
 ```
-$ composer install thebigsurf/wire-update-hook
+$ composer require thebigsurf/wire-update-hook
 ```
 
 ### To Install Manually:
