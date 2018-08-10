@@ -1,5 +1,5 @@
 {
-        "name": "thebigsurf/magento2-wireupdatehook",
+        "name": "thebigsurf/wire-update-hook",
         "description": "Wire Update Hook",
         "type": "magento2-module",
         "version": "1.0.0",
