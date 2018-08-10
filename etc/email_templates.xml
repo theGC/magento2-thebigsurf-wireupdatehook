@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../WireUpdateHook/etc/email_templates.xsd">
+<template id="send_email_email_template" label="Email Form" file="send_form.html" type="text" module="TheBigSurf_WireUpdateHook" area="frontend"/>
+<template id="attributr_api_error_email_template" label="Email Form" file="attributr_api_error.html" type="text" module="TheBigSurf_WireUpdateHook" area="frontend"/>
+</config>

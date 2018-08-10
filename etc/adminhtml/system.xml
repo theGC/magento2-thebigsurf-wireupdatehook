@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="thebigsurf" translate="label" sortOrder="100">
+            <label>Wire Update Hook</label>
+        </tab>
+        <section id="setting" translate="label" sortOrder="180" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Settings</label>
+            <tab>thebigsurf</tab>
+            <resource>TheBigSurf_WireUpdateHook::config_api</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Wire Products Hook Configuration Options</label>
+                <field id="apiurl" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>API URL</label>
+                    <comment>The URL for your Processwire site, i.e. https://www.example.com/</comment>
+                </field>
+                <field id="apitoken" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>API Token</label>
+                    <comment>Token to authenicate your connection to Processwire. You can generate and save a token via the MagentoSync module config page in Processwire.</comment>
+                </field>
+                 <field id="apierroremail" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Admin Email</label>
+                    <comment>Admin email for any error messages</comment>
+                </field>
+                <field id="apilog" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Logging</label>
+                    <comment>Log any errors to your Magento log at: /var/log/thebigsurf.log</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
