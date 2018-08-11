@@ -1,21 +1,18 @@
 {
-        "name": "thebigsurf/wire-update-hook",
-        "description": "Wire Update Hook",
-        "type": "magento2-module",
-        "version": "1.0.6",
-        "license": [
-            "OSL-3.0",
-            "AFL-3.0"
+    "name": "the-big-surf/wire-update-hook",
+    "description": "Wire Update Hook",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
         ],
-        "require": {
-            "magento/magento-composer-installer": "*"
-        },
-        "extra": {
-            "map": [
-                [
-                    "*",
-                    "TheBigSurf/WireUpdateHook"
-                ]
-            ]
+        "psr-4": {
+            "TheBigSurf\\WireUpdateHook\\": ""
         }
     }
+}
