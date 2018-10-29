@@ -42,7 +42,7 @@ class onProductAttrUpdateBefore extends UpdateHookObserver
             $skus[]  = $product->getSku();
         }
 
-        $productjson = 'data={"sku":["'.implode('","',$skus).'"]}';
+        $productjson = 'data={"id":["'.implode('","',$skus).'"]}';
 
         return $productjson;
 

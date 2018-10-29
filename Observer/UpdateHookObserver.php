@@ -180,8 +180,8 @@ class UpdateHookObserver implements \Magento\Framework\Event\ObserverInterface
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $apiUrl);
-        curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  //Post Fields
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $headers = array();
