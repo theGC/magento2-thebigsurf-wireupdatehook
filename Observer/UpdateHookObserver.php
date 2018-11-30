@@ -180,14 +180,15 @@ class UpdateHookObserver implements \Magento\Framework\Event\ObserverInterface
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $apiUrl);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  //Post Fields
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  // JSON formated string
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $headers = array();
         $headers[] = 'Accept: application/json';
-        $headers[] = 'Content­Type: application/json';
-        $headers[] = 'X-Sync-Authorization:' . $this->apitoken;
+        $headers[] = 'Content­-Type: application/json';
+        $headers[] = 'Content-Length: ' . strlen($data);
+        $headers[] = 'X-Sync-Authorization: ' . $this->apitoken;
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
