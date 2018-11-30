@@ -33,7 +33,7 @@ class onProductSaveAfter extends UpdateHookObserver
 
         $product     = $observer->getProduct();
         $sku         = $product->getSku();
-        $productjson = 'data={"sku":["'.$sku.'"]}';
+        $productjson = '{"data":{"sku":["'.$sku.'"]}}';
 
         return $productjson;
 

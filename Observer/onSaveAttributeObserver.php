@@ -33,7 +33,7 @@ class onSaveAttributeObserver extends UpdateHookObserver
 
         $attribute     = $observer->getEvent()->getAttribute();
         $attr_id       = $attribute->getAttributeId();
-        $attributeJSON = 'data={"id":["'.$attr_id.'"]}';
+        $attributeJSON = '{"data":{"id":["'.$attr_id.'"]}}';
 
         return $attributeJSON;
 

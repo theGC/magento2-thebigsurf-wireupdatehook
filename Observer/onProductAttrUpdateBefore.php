@@ -35,14 +35,14 @@ class onProductAttrUpdateBefore extends UpdateHookObserver
 
         $skus          = [];
 
-        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $objectManager = \magento\Framework\App\ObjectManager::getInstance();
 
         foreach($productids as $key => $productid) {
             $product = $objectManager->get('Magento\Catalog\Model\Product')->load($productid);
             $skus[]  = $product->getSku();
         }
 
-        $productjson = 'data={"id":["'.implode('","',$skus).'"]}';
+        $productjson = '{"data":{"id":["'.implode('","',$skus).'"]}}';
 
         return $productjson;
 

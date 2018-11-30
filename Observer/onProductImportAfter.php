@@ -39,7 +39,7 @@ class onProductImportAfter extends UpdateHookObserver
             $skus[]  = $productid['sku'];
         }
 
-        $productjson = 'data={"sku":["'.implode('","',$skus).'"]}';
+        $productjson = '{"data":{"sku":["'.implode('","',$skus).'"]}}';
 
         return $productjson;
 
