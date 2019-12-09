@@ -19,4 +19,6 @@
 
     <preference for="TheBigSurf\WireUpdateHook\Api\SkuRepositoryInterface" type="TheBigSurf\WireUpdateHook\Model\SkuRepository" />
 
+    <preference for="TheBigSurf\WireUpdateHook\Api\AttributeRepositoryInterface" type="TheBigSurf\WireUpdateHook\Model\AttributeRepository" />
+
 </config>
