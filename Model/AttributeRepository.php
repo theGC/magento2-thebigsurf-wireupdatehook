@@ -27,15 +27,15 @@ class AttributeRepository implements AttributeRepositoryInterface
 
         $table = $connection->getTableName('eav_attribute');
 
-        $result = $connection->fetchAll("SELECT attribute_id FROM `$table`"
+        $result = $connection->fetchAll("SELECT attribute_code FROM `$table`"
             . ' WHERE entity_type_id=4'
             . ' AND frontend_input IS NOT NULL'
             . ' AND frontend_label IS NOT NULL'
             . ' AND attribute_code NOT IN ("image_label", "merchant_center_category", "minimal_price", "small_image_label", "thumbnail_label")');
 
-        $ids = array_column($result, 'attribute_id');
+        $codes = array_column($result, 'attribute_code');
 
-        return $ids;
+        return $codes;
 
     }
 
