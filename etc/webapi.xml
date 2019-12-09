@@ -9,6 +9,13 @@
         </resources>
     </route>
 
+    <route url="/V1/skus/:date" method="GET">
+        <service class="TheBigSurf\WireUpdateHook\Api\SkuRepositoryInterface" method="getModifiedAfter"/>
+        <resources>
+            <resource ref="Magento_Catalog::products" />
+        </resources>
+    </route>
+
     <route url="/V1/ids" method="POST">
         <service class="TheBigSurf\WireUpdateHook\Api\SkuRepositoryInterface" method="getID"/>
         <resources>
@@ -16,8 +23,8 @@
         </resources>
     </route>
 
-    <route url="/V1/skus/:date" method="GET">
-        <service class="TheBigSurf\WireUpdateHook\Api\SkuRepositoryInterface" method="getModifiedAfter"/>
+    <route url="/V1/attributes" method="GET">
+        <service class="TheBigSurf\WireUpdateHook\Api\AttributeRepositoryInterface" method="get"/>
         <resources>
             <resource ref="Magento_Catalog::products" />
         </resources>
